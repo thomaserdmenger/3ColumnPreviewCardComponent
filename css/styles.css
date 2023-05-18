@@ -1,3 +1,11 @@
+:root {
+  --color-background-main: hsla(0, 0%, 95%, 100%);
+  --color-text: hsla(0, 0%, 100%, 100%);
+  --color-orange: hsla(31, 76%, 52%, 100%);
+  --color-teal: hsla(184, 100%, 22%, 100%);
+  --color-green: hsla(179, 100%, 13%, 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -11,5 +19,112 @@ html {
 }
 
 body {
+  background-color: var(--color-background-main);
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 44.2rem);
+  grid-template-columns: repeat(1, 32.7rem);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  padding: 48px 49px;
+}
+
+.card--orange {
+  background-color: var(--color-orange);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card--teal {
+  background-color: var(--color-teal);
+}
+
+.card--green {
+  background-color: var(--color-green);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.card__image {
+  width: 63.91px;
+  height: 40px;
+  margin-bottom: 3.5rem;
+}
+
+.card__heading {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--color-background-main);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.card__text {
+  color: var(--color-text);
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card__button {
+  border: none;
+  outline: none;
+  width: 14.6rem;
+  height: 4.8rem;
+  border-radius: 25px;
+  background-color: var(--color-background-main);
+  cursor: pointer;
+}
+
+.card__button:hover {
+  color: var(--color-text);
+  border: 0.2rem solid var(--color-text);
+}
+
+.card__button--orange {
+  color: var(--color-orange);
+}
+
+.card__button--orange:hover {
+  background-color: var(--color-orange);
+}
+
+.card__button--teal {
+  color: var(--color-teal);
+}
+
+.card__button--teal:hover {
+  background-color: var(--color-teal);
+}
+
+.card__button--green {
+  color: var(--color-green);
+}
+
+.card__button--green:hover {
+  background-color: var(--color-green);
+}
+
+.card__text,
+.card__button {
+  font-size: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    grid-template-rows: repeat(1, 50rem);
+    grid-template-columns: repeat(3, 30.7rem);
+  }
 }
