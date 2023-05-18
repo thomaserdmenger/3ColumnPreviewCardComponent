@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I've uses BEM for naming my CSS classes to bring everything in professional order. [Red more about BEM](https://getbem.com/)
+I've used BEM for naming my CSS classes to get everything in professional order. [Read more about BEM](https://getbem.com/)
 
 ## Author
 
